@@ -118,12 +118,12 @@ body{
 .hamburger::after{bottom:-6px}
 
 
-.hero{
+.HomePage{
   margin-top:var(--header-height);
   min-height:calc(100vh - var(--header-height));
   display:block;
 }
-.hero-slider{
+.HomePage-slider{
   position:relative;
   height:calc(100vh - var(--header-height));
   overflow:hidden;
@@ -226,7 +226,7 @@ body{
   :root{ 
     --header-height:56px; 
   }
-  .hero-slider{
+  .HomePage-slider{
     height:calc(100vh - var(--header-height));
   }
   .cards{
