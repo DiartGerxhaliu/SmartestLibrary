@@ -11,3 +11,5 @@ Platforma thekson gjithashtu angazhimin e komunitetit duke promovuar ngjarje, pu
 Me një dizajn që i përgjigjet nevojave, navigim të qartë dhe strukturë të fokusuar në aksesueshmëri, Smart Library ofron një përvojë të qetë në të gjitha pajisjet desktop dhe mobile.
 Në përgjithësi, Smart Library synon të kapërcejë hendekun midis bibliotekave tradicionale dhe nevojave moderne dixhitale duke ofruar një zgjidhje të zgjuar,
 të aksesueshme dhe efikase për leximin, mësimin dhe ndarjen e njohurive në epokën dixhitale.
+
+Pjesen e books.html duhet me shiku me live server (free vs code extention) sepse perdor api nga https://openlibrary.org 
