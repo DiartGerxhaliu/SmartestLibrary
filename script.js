@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const slider = document.getElementById("hero-slider");
+  const slider = document.getElementById("HomePage-slider");
   const slides = [...slider.querySelectorAll(".slide")];
   const dotsContainer = document.getElementById("slider-dots");
   const navToggle = document.getElementById("nav-toggle");
