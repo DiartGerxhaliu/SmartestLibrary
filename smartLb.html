@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Smart Library — Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Smart Library — a modern library platform for discovery, lending and research.">
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/utilities/font-size/font-size.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#" aria-label="Smart Library home">
+        <svg class="logo-mark" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+          <rect x="2.5" y="5" width="6.5" height="13" rx="0.8" fill="#2b9af3"/>
+          <rect x="8.5" y="3.5" width="6.5" height="15" rx="0.8" fill="#1b7ed6"/>
+          <rect x="14.5" y="7" width="6.5" height="11" rx="0.8" fill="#0e6bb7"/>
+          <circle cx="18" cy="7" r="1.2" fill="#fff" opacity="0.12"/>
+        </svg>
+        <span class="logo-text">Smart Library</span>
+      </a>
+
+      <nav class="main-nav" >
+        <ul class="nav-list">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#About">Details</a></li>
+          <li><a href=".containerr">Shop</a></li>
+          <li><a href="#WhyUs">WhyUs</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="nav-toggle" class="nav-toggle" a>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HomePage Slider -->
+  <main>
+    <section class="HomePage">
+      <div class="HomePage-slider" id="HomePage-slider">
+        <!-- Slide 1 -->
+        <article class="slide active" data-index="0" style="background-image: url(images/bg4.jpg);" >
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <h1>Smart Library — find, borrow, learn</h1>
+            <p>Discover books, e-resources and community programs from a single modern platform.</p>
+            <p class="cta-row">
+              <a class="btn" href="#About">Details</a>
+             
+            </p>
+          </div>
+        </article>
+
+        <!-- Slide 2 -->
+        <article class="slide" data-index="1" style="background-image: url(images/bg3.jpg);" >
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <h1>Personalized recommendations</h1>
+            <p>Machine-assisted suggestions to help readers find books they'll love.</p>
+          
+          </div>
+        </article>
+
+        <!-- Slide 3 -->
+        <article class="slide" data-index="2" style="background-image: url(images/bg1.jpg);" >
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <h1>Seamless e-lending & access</h1>
+            <p>Borrow e-books and audiobooks instantly with integrated digital lending.</p>
+       
+          </div>
+        </article>
+
+        <!-- Slide 4 -->
+        <article class="slide" data-index="3" style="background-image: url(images/bg2.jpg);" >
+          <div class="slide-overlay"></div>
+          <div class="slide-content container">
+            <h1>Community events & learning</h1>
+            <p>Host author talks, workshops and study groups for all ages.</p>
+          
+          </div>
+        </article>
+
+        <!-- Dots -->
+        <div class="slider-dots" id="slider-dots" role="tablist" ></div>
+      </div>
+    </section>
+<!-----About Us-------->
+<main>
+    <section class="aboutus" id="aboutus">
+      <div class="about-container">
+        <div class="about-text">
+          <h1><span style="color: white;">About </span> Smart Library</h1>
+          <p class="lead">
+            Smart Library makes discovering, borrowing and reading books effortless — anywhere, anytime.
+            We combine intuitive search, personalized recommendations and seamless borrowing to help every reader find their next favorite book.
+          </p>
+
+          <ul class="features" aria-label="Key features">
+            <li><strong>Smart search</strong> — find books by topic, excerpt, or mood.</li>
+            <li><strong>Personalized recommendations</strong> — tailored reading lists for every user.</li>
+            <li><strong>Seamless lending</strong> — quick digital checkouts across devices.</li>
+            <li><strong>Sync everywhere</strong> — progress and notes saved to the cloud.</li>
+          </ul>
+
+          <p class="mission">
+            Our mission is to make knowledge accessible and reading enjoyable for everyone by using thoughtful design and modern technology.
+          </p>
+
+          <a class="btn-primary" href="/learn-more" role="button">Learn more</a>
+        </div>
+
+        <div class="about-media" aria-hidden="false">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1200&q=80&auto=format&fit=crop"
+               alt="Hands browsing books in a quiet library"
+               class="about-image">
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
