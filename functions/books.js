@@ -15,7 +15,7 @@ function loadBooks() {
     fetch(`https://openlibrary.org/search.json?q=every&limit=${limit}&page=${page}`)
         .then(res => res.json())
         .then(data => {
-
+            
             totalPages = Math.ceil(data.numFound / limit);
             let books = data.docs;
 
