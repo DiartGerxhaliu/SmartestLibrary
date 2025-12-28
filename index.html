@@ -142,7 +142,33 @@
       <div id="recommended-books" class="books-row"></div>
     </div>
   </section>
+    <script>
+      // ========== NYTimes Best Sellers - Most Read ==========
+    const NYT_API_KEY = '6tDf5KGEnWAklqneQYScsqXXCgLbD9CceiBeoW33lCQzmaSF';
+    fetch(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${NYT_API_KEY}`)
+      .then(res => res.json())
+      .then(data => {
+        const books = data.results.books.slice(0, 5);
+        const container = document.getElementById('most-read-books');
+        books.forEach(book => {
+          container.innerHTML += `
+            <div class="book-card">
+              <img src="${book.book_image}" alt="${book.title}" />
+              <div>
+                <h3>${book.title}</h3>
+                <p>by ${book.author}</p>
+                <p class="desc">${book.description}</p>
+                <span class="meta">Publisher: ${book.publisher}</span>
+              </div>
+            </div>
+          `;
+        });
+      })
+      .catch(() => {
+        document.getElementById('most-read-books').innerHTML = "<p class='error'>Unable to load books. Check your NYT API Key.</p>";
+      });
 
+    </script>
   
   <script src="script.js"></script>
 </body>
