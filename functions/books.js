@@ -1,63 +1,105 @@
-let div = document.querySelector(".books");
-let a = 1;
-let page = 1;
-let limit = 20;
-let totalPages = 1;
+let booksDiv = document.querySelector(".books");
+let pagination = document.querySelector(".pagination");
 
-let pagination = document.createElement("div");
-pagination.classList.add("pagination")
-document.body.append(pagination);
+let page = 1;
+let limit = 24;
+let totalPages = 1;
+let typingTimer;
 
 function loadBooks() {
-    div.innerHTML = "";
+    booksDiv.innerHTML = "";
     pagination.innerHTML = "";
-    a = (page - 1) * limit + 1;
+
+    let search = document.getElementById("search").value.toLowerCase();
 
     fetch(`https://openlibrary.org/search.json?q=every&limit=${limit}&page=${page}`)
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
-            console.log('>>>>>>>>>>>', data);
-
+            
             totalPages = Math.ceil(data.numFound / limit);
+            let books = data.docs;
 
-            data.docs.forEach(element => {
-                let content = document.querySelector(".books");
+            if (search) {
+                books = books.filter(b =>
+                    b.title && b.title.toLowerCase().includes(search)
+                );
+            }
 
-                let div = document.createElement("div");
-                div.classList.add("card");
-                
-                let h1 = document.createElement("h1");
-                h1.innerHTML = a + ". " + element.title;
+            let index = (page - 1) * limit + 1;
 
-                let pic = document.createElement("img");
-                if (element.cover_i) {
-                    pic.src = `https://covers.openlibrary.org/b/id/${element.cover_i}-L.jpg`;
-                }
-                pic.loading = "lazy";
+            books.forEach(book => {
+                let card = document.createElement("div");
+                card.className = "card";
 
-                content.append(div);
-                div.append(pic);
-                div.append(h1);
-                a++;
+                let img = document.createElement("img");
+                img.src = book.cover_i
+                    ? `https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`
+                    : "";
+
+                let title = document.createElement("h1");
+                title.textContent = index + ". " + book.title;
+
+                card.append(img, title);
+                booksDiv.append(card);
+                index++;
             });
 
-            for (let i = 1; i <= Math.min(totalPages, 10); i++) {
-                let btn = document.createElement("button");
-                btn.innerHTML = i;
-                if (i === page) btn.disabled = true;
-
-                btn.onclick = () => {
-                    page = i;
-                    loadBooks();
-                };
-
-                pagination.append(btn);
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching:", error);
-            div.textContent = "Failed to load books.";
+            renderPagination();
         });
 }
+
+function renderPagination() {
+    pagination.innerHTML = "";
+
+    let visible = 10;
+    let start = page - Math.floor(visible / 2);
+    let end = page + Math.floor(visible / 2);
+
+    if (start < 1) {
+        start = 1;
+        end = visible;
+    }
+
+    if (end > totalPages) {
+        end = totalPages;
+        start = Math.max(1, end - visible + 1);
+    }
+
+    if (page > 1) {
+        let prev = document.createElement("button");
+        prev.innerHTML = "<";
+        prev.onclick = () => { page--; loadBooks(); };
+        pagination.append(prev);
+    }
+
+    for (let i = start; i <= end; i++) {
+        let btn = document.createElement("button");
+        btn.textContent = i;
+
+        if (i === page) btn.disabled = true;
+
+        btn.onclick = () => {
+            page = i;
+            loadBooks();
+        };
+
+        pagination.append(btn);
+    }
+
+    if (page < totalPages) {
+        let next = document.createElement("button");
+        next.innerHTML = ">";
+        next.onclick = () => { page++; loadBooks(); };
+        pagination.append(next);
+    }
+}
+
+document.getElementById("search").addEventListener("input", () => {
+    clearTimeout(typingTimer);
+    typingTimer = setTimeout(() => {
+        page = 1;
+        loadBooks();
+    }, 300);
+});
 
 loadBooks();
