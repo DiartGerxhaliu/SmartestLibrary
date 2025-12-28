@@ -60,7 +60,16 @@ document.addEventListener("DOMContentLoaded", () => {
     navToggle.setAttribute("aria-expanded", !expand);
     header.classList.toggle("nav-open");
   });
-
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowRight") {
+    next();   
+    start();  
+  } 
+  else if (e.key === "ArrowLeft") {
+    prev();   
+    start();  
+  }
+});
 
   start(); // start Automatizmin
 });
