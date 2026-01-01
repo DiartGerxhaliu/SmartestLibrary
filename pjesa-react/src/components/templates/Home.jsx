@@ -4,6 +4,8 @@ import Banner from '../Organisms/Banner'
 import StatsSection from '../Organisms/StatsSection'
 import AboutSection from '../Organisms/AboutSection'
 import CTASection from '../Organisms/CTASection'
+import BooksSection from '../Organisms/BooksSection'
+import ContactSection from '../Organisms/ContactSection'
 import BG1 from "../../assets/bg1.jpg"
 import BG2 from "../../assets/bg2.jpg"
 import BG3 from "../../assets/bg3.jpg"
@@ -45,7 +47,11 @@ function Home() {
 
             <AboutSection />
 
+            <BooksSection />
+
             <CTASection />
+
+            <ContactSection />
         </Box>
     )
 }
