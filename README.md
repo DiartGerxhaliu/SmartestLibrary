@@ -12,3 +12,9 @@ Në përgjithësi, Smart Library synon të kapërcejë hendekun midis biblioteka
 të aksesueshme dhe efikase për leximin, mësimin dhe ndarjen e njohurive në epokën dixhitale.
 
 Pjesen e books.html duhet me shiku me live server (free vs code extention) sepse perdor api nga https://openlibrary.org 
+
+Per pjesen e Reactit cd brenda react
+cd pjesa-react
+npm start
+
+ose lexo readme.md brenda atij folderi
