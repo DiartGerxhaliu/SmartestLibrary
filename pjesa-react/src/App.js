@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/templates/Home.jsx'
 import Menu from './components/Organisms/Menu';
-import Footer from './components/Organisms/Footer';
 
 function App() {
   return (
@@ -12,7 +11,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );
