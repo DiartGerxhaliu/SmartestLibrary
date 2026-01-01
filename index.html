@@ -23,6 +23,7 @@
         </svg>
         <span class="logo-text">Smart Library</span>
       </a>
+
       <nav class="main-nav" >
         <ul class="nav-list">
           <li><a href="#" class="active">Home</a></li>
@@ -167,6 +168,48 @@
         document.getElementById('most-read-books').innerHTML = "<p class='error'>Unable to load books. Check your NYT API Key.</p>";
       });
 
+       // ========== Google Books API - Newly Added ==========
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=subject:fiction&orderBy=newest&maxResults=5`)
+      .then(res => res.json())
+      .then(data => {
+        const books = data.items || [];
+        const container = document.getElementById('newly-added-books');
+        books.forEach(item => {
+          const info = item.volumeInfo;
+          container.innerHTML += `
+            <div class="book-card">
+              <img src="${info.imageLinks ? info.imageLinks.thumbnail : 'https://via.placeholder.com/120x180?text=No+Image'}" alt="${info.title}" />
+              <div>
+                <h3>${info.title}</h3>
+                <p>by ${info.authors ? info.authors.join(', ') : 'Unknown'}</p>
+                <p class="desc">${info.description ? info.description.substring(0, 100) + '...' : ''}</p>
+                <span class="meta">Published: ${info.publishedDate || 'N/A'}</span>
+              </div>
+            </div>
+          `;
+        });
+      });
+      
+      // ========== Open Library - Recommended For You ==========
+   
+    fetch(`https://openlibrary.org/subjects/fantasy.json?limit=5`)
+      .then(res => res.json())
+      .then(data => {
+        const books = data.works.slice(0, 5);
+        const container = document.getElementById('recommended-books');
+        books.forEach(book => {
+          container.innerHTML += `
+            <div class="book-card">
+              <img src="${book.cover_id ? `https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg` : 'https://via.placeholder.com/120x180?text=No+Image'}" alt="${book.title}" />
+              <div>
+                <h3>${book.title}</h3>
+                <p>by ${book.authors && book.authors.length ? book.authors.map(a => a.name).join(', ') : 'Unknown'}</p>
+                <span class="meta">First published: ${book.first_publish_year || 'N/A'}</span>
+              </div>
+            </div>
+          `;
+        });
+      });
     </script>
   
   <script src="script.js"></script>
