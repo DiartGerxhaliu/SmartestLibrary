@@ -1,9 +1,14 @@
 
-main{
-  margin-top:var(--header-height)
+main {
+  margin-top:var(--header-height);
+   background:linear-gradient(180deg,#071026 0%, #0b1220 100%) !important;
 }
 
-.join-bookclub{
+footer {
+ background:linear-gradient(180deg,#071026 0%, #0b1220 100%) !important;
+}
+
+.join-bookclub {
   display: flex;
   flex-direction: row;
   align-items: center; 
@@ -30,8 +35,19 @@ text-align: center;
               outline:none;
 }
 .cards-bc{
+  padding-top: 4%;
   display:flex;
   align-items: center;
   justify-content: space-evenly ;
   flex-direction: row;
+  color:white;
+  
+}
+
+.bc-highlights {
+ 
+  border-color: red;
+}
+.bc-foto {
+padding-bottom: 15%;
 }
