@@ -34,7 +34,7 @@ function Menu() {
             backgroundColor: '#fff',
             boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
             px: '40px'
-        }}>
+        }} component={"n"}>
             <Box sx={{ cursor: 'pointer' }} onClick={() => navigate('/')}>
                 <img style={{ width: "45px" }} src={Logo} alt="Logo" />
             </Box>
