@@ -246,7 +246,10 @@ body{
   }
   .logo-text{
     display:none;
-  } 
+  }
+  .container {
+    width: 95%;
+  }
 }
 
 /* When nav open (mobile) */

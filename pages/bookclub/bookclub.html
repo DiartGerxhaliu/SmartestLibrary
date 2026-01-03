@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Smart Library — Book Club</title>
-   <link rel="stylesheet" href="../../styles.css">
+   <link rel="stylesheet" href="../../style/styles.css">
   <link rel="stylesheet" href="../../style/bookclub.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="#" aria-label="Smart Library home">
-        <svg class="logo-mark" width="36" height="36" viewBox="0 0 24 24">
+        <svg class="logo-mark" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
           <rect x="2.5" y="5" width="6.5" height="13" rx="0.8" fill="#2b9af3"/>
           <rect x="8.5" y="3.5" width="6.5" height="15" rx="0.8" fill="#1b7ed6"/>
           <rect x="14.5" y="7" width="6.5" height="11" rx="0.8" fill="#0e6bb7"/>
@@ -26,18 +26,17 @@
         <span class="logo-text">Smart Library</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" >
         <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#aboutus">About Us</a></li>
-          <li><a href="#About">Details</a></li>
-          <li><a href=".containerr">Shop</a></li>
-          <li><a href="#WhyUs">WhyUs</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../about/aboutus.html">About Us</a></li>
+          <li><a href="../books/books.html"  >Shop</a></li>
+          <li><a href="../bookclub/bookclub.html" class="active">Book Club</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
         </ul>
       </nav>
 
-      <button id="nav-toggle" class="nav-toggle">
+      <button id="nav-toggle" class="nav-toggle" a>
         <span class="hamburger"></span>
       </button>
     </div>
@@ -101,7 +100,7 @@
         <div class="about-media">
           
           <img
-            src="/images/bookclub-foto.jpg"
+            src="../../images/bookclub-foto.jpg"
             alt="People discussing books together"
             class="about-image"
           />
@@ -118,7 +117,7 @@
           Book Club Highlights
         </h1>
 
-      <div class="cards-bc">
+      <div class="cards-bc" style="color: white;">
 
           <!-- Card 1 -->
           <div >
@@ -300,7 +299,7 @@
 
 </footer>
   
- 
+ <script src="../../functions/navigation.js"></script>
 </body>
 
 </html>

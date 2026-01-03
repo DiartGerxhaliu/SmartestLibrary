@@ -96,12 +96,76 @@
 }
 
 @media (max-width: 768px) {
+  .about-page {
+    padding: 20px 10px;
+    margin-top: 56px;
+  }
+
+  .about-page h1 {
+    font-size: 24px;
+  }
+
   .stats-grid {
     flex-direction: column;
   }
   
   .about-section {
     padding: 20px;
+  }
+
+  .stat-box {
+    min-height: 120px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding: 15px 8px;
+  }
+
+  .about-page h1 {
+    font-size: 20px;
+  }
+
+  .about-page > p {
+    font-size: 14px;
+  }
+
+  .about-section {
+    padding: 15px;
+  }
+
+  .about-section h2 {
+    font-size: 18px;
+  }
+
+  .about-section p,
+  .features-list li {
+    font-size: 14px;
+  }
+
+  .stat-box {
+    min-height: 100px;
+  }
+
+  .stat-number {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .stats-section h2 {
+    font-size: 20px;
   }
 }
 
