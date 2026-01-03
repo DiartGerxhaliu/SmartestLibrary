@@ -1,9 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-pjesa-react/node_modules
-pjesa-react/.pnp
-pjesa-react/.pnp.js
+/pjesa-react/node_modules
+/pjesa-react/.pnp
+/pjesa-react/.pnp.js
 
 # testing
 /coverage
@@ -12,7 +12,7 @@ pjesa-react/.pnp.js
 /build
 
 # misc
-pjesa-react/.DS_Store
+/pjesa-react/.DS_Store
 .env.local
 .env.development.local
 .env.test.local
