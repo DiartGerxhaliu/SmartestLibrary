@@ -151,7 +151,7 @@
         <div class="map-placeholder">
           <p>📍 123 Library Street</p>
           <p>Knowledge City, KC 12345</p>
-          <button class="map-btn">View on Map</button>
+          <button class="map-btn" onclick="openMap()">View on Map</button>
         </div>
       </div>
       
@@ -165,6 +165,24 @@
       </div>
     </aside>
   </div>
+  </div>
+
+  <!-- Map Modal -->
+  <div id="mapModal" class="map-modal">
+    <div class="map-modal-content">
+      <span class="map-close" onclick="closeMap()">&times;</span>
+      <h2>📍 Our Location</h2>
+      <iframe 
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-74.0060%2C40.7128%2C-73.9960%2C40.7228&layer=mapnik&marker=40.7128%2C-74.0060" 
+        width="100%" 
+        height="450" 
+        style="border:1px solid #2b9af3; border-radius: 8px;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+      <p style="margin-top: 15px; color: #9aa6b2;">123 Library Street, Knowledge City, KC 12345</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Library" target="_blank" class="directions-btn">Get Directions</a>
+    </div>
   </div>
 
   <script src="contact.js"></script>
