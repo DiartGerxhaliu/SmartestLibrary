@@ -1,7 +1,7 @@
 .about-page {
   margin-top: 64px;
   padding: 40px 20px;
-  background: #0f1724;
+   background:linear-gradient(180deg,#071026 0%, #0b1220 100%);
   color: white;
   min-height: calc(100vh - 64px);
 }

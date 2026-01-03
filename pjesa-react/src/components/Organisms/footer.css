@@ -1,0 +1,118 @@
+.footer-container {
+    background-color: #050a18;
+    color: #ffffff;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer-border-box {
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+}
+
+/* Kolonat kryesore */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-column p, .footer-column li {
+    color: #a0aec0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    list-style: none;
+}
+
+.footer-column ul {
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.footer-column ul li:hover {
+    color: #4299e1;
+}
+
+/* Orari */
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    max-width: 220px;
+    margin-bottom: 8px;
+}
+
+.hours-label {
+    font-weight: bold;
+}
+
+/* Pjesa e poshtme */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.logo-icon {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    border-radius: 4px;
+}
+
+.copyright-text {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons span {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.social-icons span:hover {
+    transform: translateY(-3px);
+    color: #4299e1;
+}
+
+/* Përshtatja për Celular (Responsive) */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
