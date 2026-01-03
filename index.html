@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Smart Library — Home</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="/style/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <meta name="description" content="Smart Library — a modern library platform for discovery, lending and research.">
   <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
@@ -26,12 +26,11 @@
 
       <nav class="main-nav" >
         <ul class="nav-list">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#aboutus">About Us</a></li>
-          <li><a href="#About">Details</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="./pages/about/aboutus.html">About Us</a></li>
           <li><a href="./pages/books/books.html">Shop</a></li>
-          <li><a href="#WhyUs">WhyUs</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="./pages/bookclub/bookclub.html">Book Club</a></li>
+          <li><a href="./pages/contact/contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -46,7 +45,7 @@
     <section class="HomePage">
       <div class="HomePage-slider" id="HomePage-slider">
         <!-- Slide 1 -->
-        <article class="slide active" data-index="0" style="background-image: url(images/bg4.jpg);" >
+        <article class="slide active" data-index="0" style="background-image: url(../images/bg4.jpg);" >
           <div class="slide-overlay"></div>
           <div class="slide-content container">
             <h1>Smart Library — find, borrow, learn</h1>
@@ -59,7 +58,7 @@
         </article>
 
         <!-- Slide 2 -->
-        <article class="slide" data-index="1" style="background-image: url(images/bg3.jpg);" >
+        <article class="slide" data-index="1" style="background-image: url(../images/bg3.jpg);" >
           <div class="slide-overlay"></div>
           <div class="slide-content container">
             <h1>Personalized recommendations</h1>
@@ -69,7 +68,7 @@
         </article>
 
         <!-- Slide 3 -->
-        <article class="slide" data-index="2" style="background-image: url(images/bg1.jpg);" >
+        <article class="slide" data-index="2" style="background-image: url(../images/bg1.jpg);" >
           <div class="slide-overlay"></div>
           <div class="slide-content container">
             <h1>Seamless e-lending & access</h1>
@@ -79,7 +78,7 @@
         </article>
 
         <!-- Slide 4 -->
-        <article class="slide" data-index="3" style="background-image: url(images/bg2.jpg);" >
+        <article class="slide" data-index="3" style="background-image: url(../images/bg2.jpg);" >
           <div class="slide-overlay"></div>
           <div class="slide-content container">
             <h1>Community events & learning</h1>
@@ -373,6 +372,6 @@
 
 
 
-  <script src="script.js"></script>
+  <script src="../../functions/script.js"></script>
 </body>
 </html>

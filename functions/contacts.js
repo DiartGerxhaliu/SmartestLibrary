@@ -1,3 +1,20 @@
+// Map modal functions
+function openMap() {
+  document.getElementById('mapModal').style.display = 'flex';
+}
+
+function closeMap() {
+  document.getElementById('mapModal').style.display = 'none';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('mapModal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
 // Contact form script
 document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
