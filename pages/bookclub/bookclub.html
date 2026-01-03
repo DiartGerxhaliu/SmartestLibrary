@@ -300,6 +300,19 @@
 </footer>
   
  <script src="../../functions/navigation.js"></script>
+  <script src="code.jquery.com" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+    $(document).ready(function(){
+      $('.btn-primary').click(function(){
+        var email = $('.fusha-email').val();
+        if(email){
+          alert('Faleminderit per regjistrimin tuaj ne smartLibrary: ' + email);
+        } else {
+          alert('Ju lutem shtypni nje email te vlefshem.');
+        }
+        email = '';
+      });
+    });
+  </script>
 </body>
 
 </html>
