@@ -44,8 +44,7 @@
 
   <!-- Book Club Content -->
   <main >
-
-    <!-- Intro / Signup -->
+    
     <section >
       <div class="bc-joinus">
 
@@ -58,7 +57,7 @@
           Join us and be part of engaging conversations and shared discoveries.
         </p>
 
-        <!-- Visual Email Input (No JS) -->
+        <!-- Email Input -->
         <div >
           <input 
           class="fusha-email"
@@ -110,7 +109,7 @@
       </div>
     </section>
 
-    <!-- Characteristics -->
+    <!-- Karakteristikat -->
     <section  >
       <div class="bc-highlights">
        <h1 class="bc-title">
@@ -120,20 +119,20 @@
       <div class="cards-bc">
 
           <!-- Card 1 -->
-          <div >
-            <h2 >250+</h2>
+          <div id>
+            <h2 id="card1">250+</h2>
             <p >Active Members</p>
           </div>
 
           <!-- Card 2 -->
           <div>
-            <h2 >24</h2>
+            <h2 id="card2" >24</h2>
             <p >Meetings Per Year</p>
           </div>
 
           <!-- Card 3 -->
           <div>
-            <h2 >60+</h2>
+            <h2 id="card3">60+</h2>
             <p>Books Read Together</p>
           </div>
 
@@ -298,21 +297,33 @@
   </div>
 
 </footer>
-  
+  <script src="../../functions/bookclub.js"></script>
  <script src="../../functions/navigation.js"></script>
-  <script src="code.jquery.com" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
-    $(document).ready(function(){
-      $('.btn-primary').click(function(){
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  
+  <script>
+  
+    $(document).ready(function () {
+
+      
+      $('.btn-primary').click(function () {
         var email = $('.fusha-email').val();
-        if(email){
+        if (email) {
           alert('Faleminderit per regjistrimin tuaj ne smartLibrary: ' + email);
+          $('.fusha-email').val('');
         } else {
           alert('Ju lutem shtypni nje email te vlefshem.');
         }
-        email = '';
       });
+
     });
   </script>
+
+</body>
+</html>
+
 </body>
 
 </html>
